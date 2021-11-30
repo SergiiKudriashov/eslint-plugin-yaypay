@@ -1,0 +1,38 @@
+{
+  "name": "eslint-plugin-yaypay",
+  "version": "0.0.2",
+  "description": "Yaypay styleguide eslint rules",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "test.js",
+    "build": "tsc --project tsconfig.json",
+    "publish-patch": "npm test && npm run build && npm version patch && git push && npm publish --registry https://registry.npmjs.org",
+    "publish-minor": "npm test && npm run build && npm version minor && git push && npm publish --registry https://registry.npmjs.org",
+    "publish-major": "npm test && npm run build && npm version major && git push && npm publish --registry https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergiiKudriashov/eslint-plugin-yaypay.git"
+  },
+  "keywords": [
+    "eslint",
+    "plugins",
+    "stylegide",
+    "rules"
+  ],
+  "author": "Serhii Kudriashov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SergiiKudriashov/eslint-plugin-yaypay/issues"
+  },
+  "homepage": "https://github.com/SergiiKudriashov/eslint-plugin-yaypay#readme",
+  "files": [
+    "dist/*"
+  ],
+  "engines": {
+    "node": ">=8"
+  },
+  "module": "dist/index.min.js",
+  "browser": "dist/index.min.js",
+  "dependencies": {}
+}
